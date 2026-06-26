@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <select class='dropdown' style=" border-radius: 20px ">
+    <option value="cat">cat</option>
+    <option value="dog">dog</option>
+</select>
+<img class="image" src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=300">
+
+<script>
+const dropdown=document.querySelector('.dropdown');
+const photo=document.querySelector('.image');
+const images={
+   cat:"https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=300",
+   dog:"https://images.unsplash.com/photo-1543466835-00a7907e9de1?q=80&w=300"
+}
+dropdown.addEventListener('change',(event)=>{
+   const animal=event.target.value ;
+   photo.src=images[animal];
+
+})
+
+</script>
+
+</body>
+</html>

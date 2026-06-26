@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>Enter Name</p>
+  <input type="text" class="name" value="arvind">
+  <button class="marks-button">show Marks</button>
+  <p class="marks"></p>
+  <script>
+    const students={
+        arvind:90,
+        rahul:80,
+        aman:95
+    }
+    const input=document.querySelector('.name');
+    const marks_button=document.querySelector('.marks-button');
+    const marks=document.querySelector('.marks');
+    input.addEventListener('input',(e)=>{
+      let name=e.target.value ;
+      const student_marks=students[name];
+      marks_button.addEventListener('click',()=>{
+        marks.textContent=students[name]     
+      })
+    })
+  </script>
+</body>
+</html>

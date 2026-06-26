@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" class="str">
+  <p class="count"></p>
+  <script>
+    const ip=document.querySelector('.str');
+    const op=document.querySelector('.count');
+    ip.addEventListener('input',(e)=>{
+      const str=e.target.value ;
+      let count=0;
+      for(let i=0;i<str.length;i++){
+          count++;
+      }
+      op.textContent=`Total charcter=${count}` ;
+    }) 
+  </script>
+</body>
+</html>

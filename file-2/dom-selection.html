@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<input type="text" class='name'>
+<button id="showButton">Show</button>
+<p class="msg"></p>
+<script>
+
+const nameInput=document.querySelector('.name');
+const buttonInput=document.querySelector('#showButton');
+const msg=document.querySelector('.msg');
+
+// add event
+buttonInput.addEventListener('click',()=>{
+
+const name=nameInput.value;
+if(name===""){
+  msg.textContent="Hello Stranger";
+}
+else{
+  msg.textContent=`Hello ${name}` 
+}
+
+})
+
+</script>  
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currency Flag</title>
+</head>
+<body>
+<select class="currency">
+    <option>USD</option>
+    <option>INR</option>
+    <option>JPY</option>
+</select>
+  <img width="100" src="https://flagsapi.com/US/flat/64.png" class="flag">
+    <script>
+    const countryList={
+      USD:"US",
+      INR:"IN",
+      JPY:"JP",
+    };
+    const opt=document.querySelector('.currency');
+    opt.addEventListener("change",(e)=>{
+       // take key from event
+       let key=e.target.value ;
+       const countryCode=countryList[key];
+       let img=document.querySelector('.flag');
+       img.src=`https://flagsapi.com/${countryCode}/flat/64.png`
+    })
+  </script>
+</body>
+</html>

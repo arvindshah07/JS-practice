@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body {
+      transition: background-color 0.3s ease;
+    }
+</style>
+<body>
+  <select id="drop-down">
+   <option value="red">Red</option>
+   <option value="green">Green</option>
+   <option value="blue">Blue</option> 
+   <option value="yellow">Yellow</option>
+   <option value="orange">Orange</option>
+  </select>
+  <script>
+    document.body.style.backgroundColor="red"
+    const option=document.querySelector('#drop-down');
+   const colors = {
+  red: "#FF0000",
+  green: "#008000",
+  blue: "#0000FF",
+  yellow: "#FFFF00",
+  orange: "#FFA500"
+};
+option.addEventListener('change',()=>{
+  const key=event.target.value ;
+  const color=colors[key];
+  document.body.style.backgroundColor=color ;
+})
+
+
+  </script>
+</body>
+</html>
