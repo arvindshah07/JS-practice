@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do List</title>
+</head>
+<body>
+  <div class="container">
+    <h2>To Do List</h2>
+     <p>Add your Tasks</p>
+     <input type="text" class="input">
+     <button class="button">Add</button>
+     <ul class="tasks"></ul>
+     <style>
+      .delete-btn  {
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+     </style>
+
+  </div>
+  <script>
+    const ip = document.querySelector('.input');
+    const add_btn = document.querySelector('.button');
+    const tsk = document.querySelector('.tasks');
+    const remove_btn=document.querySelector('.remove-button');
+    add_btn.addEventListener('click', () => {
+      const msg = ip.value;
+      const li = document.createElement('li');
+      const delete_btn = document.createElement('button');
+      delete_btn.textContent = "remove";
+
+      // .trim() prevents users from just adding empty spaces
+      if (msg.trim() !== "") {
+        li.textContent = msg + " "; // Added a little space before the button
+         delete_btn.classList.add('delete-btn');
+        // 1. Add functionality to the remove button so it deletes its own 'li'
+        delete_btn.addEventListener('click', () => {
+          li.remove();
+        });
+       
+        // 2. FIX: Append the button INSIDE the list item (li)
+        li.appendChild(delete_btn);
+        
+        // 3. Append the complete list item into the main container (ul)
+        tsk.appendChild(li);
+        
+
+        // 4. Clear the input field for the next task
+        ip.value = "";
+      }
+    });
+  </script>
+</body>
+</html>

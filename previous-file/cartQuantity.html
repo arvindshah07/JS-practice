@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+</head>
+<body>
+    <button>Show Quantity</button>
+    <button onclick=" calculation(1)">Add to Cart</button>
+    <button onclick="calculation(2)">+2</button>
+    <button onclick="calculation(3)">+3</button>
+    <button onclick="calculation(4)">+4</button>
+    <button onclick="calculation(5)">+5</button>
+    <button onclick="calculation(-1)">Remove from cart</button>
+    <button onclick="calculation(-2)">-2</button>
+    <button onclick="calculation(-3)">-3</button>
+    <button onclick="display(0)">Reset</button>
+    <p class="showquantity"></p>
+    <script>
+        display(0);
+        let quantity=0;
+        function calculation(num){
+            quantity+=num;
+            if(quantity<15 && quantity>=0)
+            display(quantity);
+        }
+
+        function display(quantity){
+             document.querySelector('.showquantity')
+             .innerHTML=`Cart quantity: ${quantity}`;
+        }
+    </script>
+</body>
+</html>

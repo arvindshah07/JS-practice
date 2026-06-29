@@ -1,0 +1,8 @@
+.cart{
+    border: none;
+    padding: 10px 60px;
+    background-color: rgb(255, 216, 20);
+    font-size: 20px;
+    border-radius: 1000px;
+    cursor: pointer;
+}

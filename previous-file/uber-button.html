@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Uber-button</title>
+        <link rel="stylesheet" href="uber-button.css">
+        <style>
+            .request{
+    color: white;
+    background-color: rgb(0, 0, 0);
+    font-weight: 800;
+    height: 40px;
+    width: 140px;
+    border: none;
+    margin-left: 30px;
+    margin-right: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.schedule{
+    color: black;
+    background-color: rgb(230, 230, 230);
+    font-weight: 800;
+    height: 40px;
+    width: 180px;
+    border: none;
+    margin-right: 30px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.requested{
+    color: white;
+    background-color:rgb(28, 203, 46);
+    font-weight: 800;
+    height: 40px;
+    width: 140px;
+    border: none;
+    margin-left: 30px;
+    margin-right: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+        </style>
+    </head>
+    <body>
+        <button class="request  rbutton" onclick="const button=document.querySelector('.request');
+        if(!button.classList.contains('requested')){
+            button.classList.add('requested');
+            document.querySelector('.rbutton')
+            .innerHTML='Request now';
+        }else{
+            button.classList.remove('.requested');
+            document.querySelector('.rbutton')
+            .innerHTML='Request';
+        }">
+            Request now</button>
+        <button class="schedule">Schedule for later</button>
+        
+    </body>
+</html>

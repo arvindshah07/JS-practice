@@ -1,0 +1,17 @@
+    .gaming {
+    font:Arial;
+    color: white;
+    background-color: black;
+    font-size: 20px;
+    padding: 12px;
+    border: none;
+    width: 100px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 100px;
+
+}
+ .is-toggled{
+    background-color: white;
+    color:black;
+ }
